@@ -4,6 +4,12 @@
  | || '  \/ _` / _` / -_)   / _ \  _/ _` |  _/ _ \ '_|
 |___|_|_|_\__,_\__, \___|_|_\___/\__\__,_|\__\___/_|  
                |___/
+
+     AUTHOR: Anthony Garand
+    CREATED: 1/01/2011
+    UPDATED: 7/24/2011
+DESCRIPTION: Simple jQuery Image Rotator Plugin
+
 */
 (function($){  
 	$.fn.imageRotator = function(options) {
@@ -11,7 +17,11 @@
 		var defaults = {
 			width: 400,
 			height: 300,
-			speed: 500
+			speed: 500,
+			autoRotate: true,
+			autoRotateDelay: 2000,
+			showArrows: true,
+			showCircles: true,
 		};
 		var options = $.extend(defaults,options);
 		$(this).find("img").css("width",options.width+"px");
@@ -104,6 +114,25 @@
 					return false;
 				}
 			});
+			
+			if (options.autoRotate) {
+			  var autoRotate = window.setInterval(function(){
+			    if (!($(".imgBorder > .imgMask > .imgWrap").is(':animated'))){
+			      arrowSlide("right",rotator);
+		      }
+			  },options.autoRotateDelay+options.speed);
+			}
+			
+			if (!options.showArrows) {
+			  $(this).find("a.leftControl").hide();
+			  $(this).find("a.rightControl").hide();
+			}
+			if (!options.showCircles) {
+			  $(this).find(".imgRotateControls").hide();
+			}
+			if (!options.showArrows && !options.showCircles) {
+			  console.log("WARNING: There is no way to rotate the images.");
+			}
 		});
 	};  
 })(jQuery);

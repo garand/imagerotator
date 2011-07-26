@@ -1,110 +1,110 @@
 .imgRotate {
-	margin: 0px;
-	margin-bottom: 20px;
+	margin:0;
+	margin-bottom:20px;
 }
 
 .imgRotate .imgBorder:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
 }
 
 .imgRotate .imgBorder a {
-	display: block;
-	position: relative;
-	width: 20px;
-	height: 40px;
-	margin-top: -40px;
-	z-index: 9999;
-	background: url("rotator_arrows.png");
+	display:block;
+	position:relative;
+	width:20px;
+	height:40px;
+	margin-top:-40px;
+	z-index:9999;
+	background:url("rotator_arrows.png");
 }
 
 .imgRotate .imgBorder a.leftControl { 
-	background-position: 0 0;
+	background-position:0 0;
 }
 
 .imgRotate .imgBorder a.rightControl { 
-	background-position: 100% 0;
-	margin-left: -20px;
-	margin-top: -40px;
+	background-position:100% 0;
+	margin-left:-20px;
+	margin-top:-40px;
 }
 
 .imgRotate .imgBorder a.leftControl:hover { 
-	background-position: 0 100%;
+	background-position:0 100%;
 }
 
 .imgRotate .imgBorder a.rightControl:hover { 
-	background-position: 100% 100%;
+	background-position:100% 100%;
 }
 
 .imgRotate .imgBorder {
-	border: solid 1px #cfcfcf;
-	padding: 6px;
+	border:solid 1px #cfcfcf;
+	padding:6px;
 }
 
 .imgRotate .imgBorder .imgMask {
-	overflow: hidden;
+	overflow:hidden;
 }
 
 .imgRotate .imgBorder .imgMask .imgWrap {
-	position: relative;
-	left: 0;
+	position:relative;
+	left:0;
 }
 
 .imgRotate .imgBorder .imgMask .imgWrap img {
-	width: 0;
-	height: 0;
-	float: left;
-	padding: 0!important;
-	border: none!important;
+	width:0;
+	height:0;
+	float:left;
+	padding:0!important;
+	border:none!important;
 }
 
 .imgRotateControls {
-	position: relative;
-	margin-top: -32px;
-	z-index: 9999;
-	height: 20px;
-	float: left;
+	position:relative;
+	margin-top:-32px;
+	z-index:9999;
+	height:20px;
+	float:left;
 }
 
 .imgRotateControls ul{
-	margin: 0!important;
-	padding: 0!important;
-	list-style: none!important;
+	margin:0!important;
+	padding:0!important;
+	list-style:none!important;
 }
 
 .imgRotateControls ul li {
-	list-style: none!important;
-	float: left;
-	background: white;
-	margin: 0!important;
-	padding: 0!important;
+	list-style:none!important;
+	float:left;
+	background:white;
+	margin:0!important;
+	padding:0!important;
 }
 
 .imgRotateControls ul li.left {
-	width: 25px;
-	height: 25px;
-	background: url("rotator_controlSides.png");
-	margin: 0;
+	width:25px;
+	height:25px;
+	background:url("rotator_controlSides.png");
+	margin:0;
 }
 
 .imgRotateControls ul li.right {
-	width: 25px;
-	height: 25px;
-	background: url("rotator_controlSides.png") 0 100%;
-	margin: 0;
+	width:25px;
+	height:25px;
+	background:url("rotator_controlSides.png") 0 100%;
+	margin:0;
 }
 
 .imgRotateControls ul li a {
-	display: block;
-	width: 10px;
-	height: 10px;
-	background: url("rotator_controls.png");
-	margin: 10px 4px;
+	display:block;
+	width:10px;
+	height:10px;
+	background:url("rotator_controls.png");
+	margin:10px 4px;
 }
 
 .imgRotateControls ul li a:hover, .imgRotateControls ul li a.active {
-	background-position: 0 100%;
+	background-position:0 100%;
 }
