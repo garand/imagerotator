@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<title>Image Rotator - A jQuery Plugin by Anthony Garand</title>
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<h1>Image Rotator</h1>
+			<h3>Super Simple jQuery Image Rotator Plugin</h3>
+		</div>
+	</header>
+	
+	<div id="content" class="wrapper">
+		<div class="imgrotator"></div>
+		
+		<h3>
+			Image Rotator is a simple jQuery plugin that allows you to take collection of images and easily transform them into an easy to style interactive slideshow.
+		</h3>
+		
+		<ul class="main-action-buttons">
+			<li>
+				<a href="#">
+					<img src="stylesheets/images/sample_icon.png"/>
+					<strong>Fork</strong>
+					Fork this on GitHub
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="stylesheets/images/sample_icon.png"/>
+					<strong>Download</strong>
+					Version 0.5<br/>
+					13.7mb
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="stylesheets/images/sample_icon.png"/>
+					<strong>Donate</strong>
+					Please donate if you like it!
+				</a>
+			</li>
+		</ul><!-- /.main-action-buttons -->
+		
+		<h2>How It Works</h2>
+		<p>Couldn't be simpler. Include the plugin and tell jQuery what to do.</p>
+		<ol class="code">
+			<li><span class="num">1</span>&lt;script src="jquery.js"&gt;&lt;/script&gt;</li>
+			<li><span class="num">2</span>&lt;script src="jquery.imagerotator.js"&gt;&lt;/script&gt;</li>
+			<li><span class="num">3</span>&lt;script&gt;</li>
+			<li><span class="num">4</span>	$(document).ready(function(){</li>
+			<li><span class="num">5</span>		$("#imgRotator").imgRotate({width:400,</li>
+			<li><span class="num">6</span>																height:300});</li>
+			<li><span class="num">7</span>	});</li>
+			<li><span class="num">8</span>&lt;/script&gt;</li>
+		</ol>
+		
+		<h2>Plugin Options</h2>
+		<p>Take a look at the various options the plugin provides. Defaults are included next to the option name.</p>
+		<ol class="code">
+			<li><span class="num">1</span>width: 400</li>
+			<li><span class="num">2</span>height: 300</li>
+			<li><span class="num">3</span>speed: 500</li>
+			<li><span class="num">4</span>autoRotate: true</li>
+			<li><span class="num">5</span>autoRotateDelay: 2000</li>
+			<li><span class="num">6</span>showArrows: true</li>
+			<li><span class="num">7</span>showCircles: true</li>
+		</ol>
+		
+		<ul class="sub-action-buttons">
+			<li>
+				<a href="#">
+					<strong>Need Help?</strong>
+					Send me an email anytime.
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<strong>Tweet This!</strong>
+					Spread the word on twitter.
+				</a>
+			</li>
+		</ul><!-- /.sub-action-buttons -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$primary: #74da01;
+$secondary: lighten(adjust-hue($primary,-42deg),7%);
+$body-width: 500px;
+$spacing: 30px;
+$font-stack: "Muli",sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Muli&v2);
+@import "compass/reset";
+@import "compass/css3";
+
+body {
+	background:$primary;
+	font-family:$font-stack;
+	color:white;
+	@include text-shadow(0 1px 0 rgba(0,0,0,.5));
+}
+
+header {
+	background:$secondary;
+	padding:$spacing 0;
+	margin:0 0 $spacing 0;
+	text-align:center;
+	border-bottom:solid 1px lighten($secondary,15%);
+	@include box-shadow(0 1px 0 darken($primary,10%));
+	
+	h1 {
+		text-transform:uppercase;
+		height:60px;
+		color:transparent;
+		@include text-shadow(none);
+		background:url("images/logo.png") center center no-repeat;
+		position:relative;
+		z-index:3;
+	}
+	
+	h3 {
+		color:darken($secondary,10%);
+		@include text-shadow(0 -1px 0 rgba(0,0,0,.45),0 1px 0 rgba(255,255,255,.3));
+		font-size:18px;
+		-webkit-font-smoothing: antialiased;
+		position:relative;
+		z-index:2;
+	
+			&:after {
+			content:'';
+			display:block;
+			@include radial-gradient(color-stops(lighten($secondary,15%), $secondary 400px), bottom center);
+			width:$body-width*1.5;
+			height:75px;
+			margin:0 auto 0 auto;
+			margin-top:-(75px-$spacing);
+			margin-left:-25%;
+			margin-bottom:-$spacing;
+		}
+	}
+}
+
+.wrapper {width:$body-width;margin-left:auto;margin-right:auto;}
+
+#content {
+	line-height:1.4em;
+	
+	.imgrotator {
+		width:469px;
+		height:436px;
+		margin:0 auto $spacing auto;
+		background:url("images/rotator_temp.png") center center no-repeat;
+	}
+	
+	.main-action-buttons {
+		@include box-shadow(0 2px 1px lighten($primary, 20%));
+		@include border-radius(4px);
+		overflow:hidden;
+		margin:$spacing 0;
+		
+		li {
+			display:block;
+			float:left;
+			width:34%;
+			
+			& a {
+				display:block;
+				@include box-shadow(0 9px 0 #b8b8b8, 0 10px 0 darken(#b8b8b8,10%));
+				@include text-shadow(0 1px 0 rgba(255,255,255,.5));
+				margin-bottom:10px;
+				position:relative;
+				border-left:solid 1px rgba(255,255,255,.7);
+				border-right:solid 1px rgba(0,0,0,.15);
+				padding:12px 10px;
+				font-size:12px;
+				line-height:1.2em;
+				border-bottom:solid 1px rgba(255,255,255,.1);
+				@include linear-gradient(color-stops(#eee,#dadada));
+				text-decoration:none;
+				color:#999;
+				
+				img {
+					float:left;
+					margin:7px 10px 0 5px;
+				}
+				
+				strong {
+					display:block;
+					font-size:18px;
+					margin-bottom:3px;
+					padding-top:3px;
+					color:darken($secondary,7%);
+				}
+
+				&:hover {
+					@include box-shadow(0 6px 0 #b8b8b8, 0 7px 0 darken(#b8b8b8,10%));
+					top:3px;
+				}
+				
+				&:active {
+					@include box-shadow(0 2px 0 #b8b8b8, 0 3px 0 darken(#b8b8b8,10%));
+					top:7px;
+				}
+			}
+			
+			&:first-child a {
+				@include border-radius(4px 0 0 4px);
+				border-left:none;
+			}
+			
+			&:last-child a {
+				@include border-radius(0 4px 4px 0);
+				border-right:none;
+			}
+
+			&:first-child,&:last-child {width:33%}			
+		}
+	}
+	
+	h2 {
+		font-size:22px;
+		margin-bottom:$spacing/3;
+	}
+	
+	p {
+		letter-spacing:-.06em;
+	}
+	
+	.code {
+		@include border-radius(4px);
+		background:darken($primary,10%);
+		@include box-shadow(0 1px 1px lighten($primary,50%),inset 0 1px 2px darken($primary,30%));
+		padding:5px 5px 4px 0;
+		margin:$spacing 0;
+		font-family:"Courier New";
+		font-size:14px;
+		
+		li {
+			line-height:1.6em;
+			
+			.num {
+				background:rgba(0,0,0,.3);
+				padding:6px 10px 0 10px;
+				margin-right:10px;
+			}
+			
+			&:first-child .num {
+				padding-top:8px;
+				@include border-radius(4px 0 0 0);
+			}
+			&:last-child .num {
+				padding-bottom:7px;
+				@include border-radius(0 0 0 4px);
+			}
+		}
+	}
+
+	&:before {
+		content:'';
+		display:block;
+		@include radial-gradient(color-stops(darken($primary,7%), $primary 400px), top center);
+		width:$body-width*1.5;
+		height:75px;
+		margin:0 auto 0 auto;
+		position:relative;
+		z-index:-1;
+		margin-left:-25%;
+		top:(-$spacing)+1;
+		margin-bottom:-75px;
+	}
+}

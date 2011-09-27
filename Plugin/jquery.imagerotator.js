@@ -51,6 +51,8 @@ DESCRIPTION: Simple jQuery Image Rotator Plugin
 			$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgBorder > .imgMask > .imgWrap").animate({ left: -((imgToGoTo-1)*imgWidth) }, options.speed, function() { });
 			$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgRotateControls > ul > li > a").removeClass("active");
 			$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgRotateControls > ul > li > a[href=#" + rotatorToSwitch + "-" + imgToGoTo + "]").addClass("active");
+			$(".imgRotate[id=" + rotatorToSwitch + "]").find(".thumbControls > ul > li > a").removeClass("active");
+			$(".imgRotate[id=" + rotatorToSwitch + "]").find(".thumbControls > ul > li > a[href=#" + rotatorToSwitch + "-" + imgToGoTo + "]").addClass("active");
 		}
 		return $(this).each(function(currRotator) {
 			$(this).attr("id","imageRotator" + (currRotator+1)); // Set ID's on each rotator
@@ -72,22 +74,28 @@ DESCRIPTION: Simple jQuery Image Rotator Plugin
 				$(rotator).find(".imgBorder > a").css("top",((imgHeight/2)+(arrowHeight/2))+"px");
 				$(rotator).find(".imgBorder > a.rightControl").css("left",imgWidth+"px");
 				var imgControls = '<div class="imgRotateControls"><ul><li class="left"></li>';
+				var thumbControls = '<div class="thumbControls"><ul>';
 				for (var i = 1; i <= numImg; i++) {	
 					imgControls += '<li><a href="#' + $(this).attr("id") + '-' + i + '"></a></li>';
 				}
-
+				
 				$(this + ".imgBorder > .imgMask > .imgWrap > img").each(function(count){
 					$(this).attr("id",$(rotator).attr("id") + '-' + (count+1));
+					thumbControls += '<li><a href="#' + $(this).attr("id")+'"><img src="'+$(this).attr("src")+'"/></a></li>';
 				});
+				
+				thumbControls += '</ul></div>';
 
 				imgControls += '<li class="right"></li></ul></div>';
 				$(this).append(imgControls);
+				$(this).append(thumbControls);
 				
 				var imgBorderWidth = ($(rotator).find(".imgBorder").outerWidth()-(imgWidth));
 				var controlsWidth = $(rotator).find(".imgRotateControls").width();
 				
 				$(rotator).find(".imgRotateControls").css("margin-left",((imgWidth+imgBorderWidth)-(controlsWidth))/2);
 				$(rotator).find(".imgRotateControls > ul > li:nth-child(2) > a").addClass("active");
+				$(rotator).find(".thumbControls > ul > li:nth-child(1) > a").addClass("active");
 			}
 
 			// On click rotate image for specific slider group
@@ -97,6 +105,20 @@ DESCRIPTION: Simple jQuery Image Rotator Plugin
 				imgToGoTo = imgToGoTo.substring(imgToGoTo.indexOf("-")+1);
 				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgBorder > .imgMask > .imgWrap").animate({ left: -((imgToGoTo-1)*imgWidth) }, options.speed, function() {});
 				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgRotateControls > ul > li > a").removeClass("active");
+				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".thumbControls > ul > li > a").removeClass("active");
+				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".thumbControls > ul > li > a[href=#"+rotatorToSwitch+"-"+imgToGoTo+"]").addClass("active");
+				$(this).addClass("active");
+				return false;
+			});
+			
+			$(".imgRotate > .thumbControls > ul > li > a").click(function(){
+				var rotatorToSwitch = $(this).closest(".imgRotate").attr("id");
+				var imgToGoTo = $(this).attr("href");
+				imgToGoTo = imgToGoTo.substring(imgToGoTo.indexOf("-")+1);
+				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgBorder > .imgMask > .imgWrap").animate({ left: -((imgToGoTo-1)*imgWidth) }, options.speed, function() {});
+				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgRotateControls > ul > li > a").removeClass("active");
+				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".thumbControls > ul > li > a").removeClass("active");
+				$(".imgRotate[id=" + rotatorToSwitch + "]").find(".imgRotateControls > ul > li > a[href=#"+rotatorToSwitch+"-"+imgToGoTo+"]").addClass("active");
 				$(this).addClass("active");
 				return false;
 			});

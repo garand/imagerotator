@@ -1,0 +1,321 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Muli&v2);
+/* line 17, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 115, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 16, ../sass/screen.scss */
+body {
+  background: #74da01;
+  font-family: "Muli", sans-serif;
+  color: white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* line 23, ../sass/screen.scss */
+header {
+  background: #fec401;
+  padding: 30px 0;
+  margin: 0 0 30px 0;
+  text-align: center;
+  border-bottom: solid 1px #fed54d;
+  -moz-box-shadow: 0 1px 0 #59a701;
+  -webkit-box-shadow: 0 1px 0 #59a701;
+  -o-box-shadow: 0 1px 0 #59a701;
+  box-shadow: 0 1px 0 #59a701;
+}
+/* line 31, ../sass/screen.scss */
+header h1 {
+  text-transform: uppercase;
+  height: 60px;
+  color: transparent;
+  text-shadow: none;
+  background: url("images/logo.png") center center no-repeat;
+  position: relative;
+  z-index: 3;
+}
+/* line 41, ../sass/screen.scss */
+header h3 {
+  color: #cb9c01;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 2;
+}
+/* line 49, ../sass/screen.scss */
+header h3:after {
+  content: '';
+  display: block;
+  background-image: -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 400, color-stop(0%, #fed54d), color-stop(100%, #fec401));
+  background-image: -webkit-radial-gradient(bottom center, #fed54d, #fec401 400px);
+  background-image: -moz-radial-gradient(bottom center, #fed54d, #fec401 400px);
+  background-image: -o-radial-gradient(bottom center, #fed54d, #fec401 400px);
+  background-image: -ms-radial-gradient(bottom center, #fed54d, #fec401 400px);
+  background-image: radial-gradient(bottom center, #fed54d, #fec401 400px);
+  width: 750px;
+  height: 75px;
+  margin: 0 auto 0 auto;
+  margin-top: -45px;
+  margin-left: -25%;
+  margin-bottom: -30px;
+}
+
+/* line 63, ../sass/screen.scss */
+.wrapper {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 65, ../sass/screen.scss */
+#content {
+  line-height: 1.4em;
+}
+/* line 68, ../sass/screen.scss */
+#content .imgrotator {
+  width: 469px;
+  height: 436px;
+  margin: 0 auto 30px auto;
+  background: url("images/rotator_temp.png") center center no-repeat;
+}
+/* line 75, ../sass/screen.scss */
+#content .main-action-buttons {
+  -moz-box-shadow: 0 2px 1px #a6fe43;
+  -webkit-box-shadow: 0 2px 1px #a6fe43;
+  -o-box-shadow: 0 2px 1px #a6fe43;
+  box-shadow: 0 2px 1px #a6fe43;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+/* line 81, ../sass/screen.scss */
+#content .main-action-buttons li {
+  display: block;
+  float: left;
+  width: 34%;
+}
+/* line 86, ../sass/screen.scss */
+#content .main-action-buttons li a {
+  display: block;
+  -moz-box-shadow: 0 9px 0 #b8b8b8, 0 10px 0 #9f9f9f;
+  -webkit-box-shadow: 0 9px 0 #b8b8b8, 0 10px 0 #9f9f9f;
+  -o-box-shadow: 0 9px 0 #b8b8b8, 0 10px 0 #9f9f9f;
+  box-shadow: 0 9px 0 #b8b8b8, 0 10px 0 #9f9f9f;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  position: relative;
+  border-left: solid 1px rgba(255, 255, 255, 0.7);
+  border-right: solid 1px rgba(0, 0, 0, 0.15);
+  padding: 12px 10px;
+  font-size: 12px;
+  line-height: 1.2em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dadada));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #dadada);
+  background-image: -moz-linear-gradient(top, #eeeeee, #dadada);
+  background-image: -o-linear-gradient(top, #eeeeee, #dadada);
+  background-image: -ms-linear-gradient(top, #eeeeee, #dadada);
+  background-image: linear-gradient(top, #eeeeee, #dadada);
+  text-decoration: none;
+  color: #999;
+}
+/* line 102, ../sass/screen.scss */
+#content .main-action-buttons li a img {
+  float: left;
+  margin: 7px 10px 0 5px;
+}
+/* line 107, ../sass/screen.scss */
+#content .main-action-buttons li a strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 3px;
+  padding-top: 3px;
+  color: #daa801;
+}
+/* line 115, ../sass/screen.scss */
+#content .main-action-buttons li a:hover {
+  -moz-box-shadow: 0 6px 0 #b8b8b8, 0 7px 0 #9f9f9f;
+  -webkit-box-shadow: 0 6px 0 #b8b8b8, 0 7px 0 #9f9f9f;
+  -o-box-shadow: 0 6px 0 #b8b8b8, 0 7px 0 #9f9f9f;
+  box-shadow: 0 6px 0 #b8b8b8, 0 7px 0 #9f9f9f;
+  top: 3px;
+}
+/* line 120, ../sass/screen.scss */
+#content .main-action-buttons li a:active {
+  -moz-box-shadow: 0 2px 0 #b8b8b8, 0 3px 0 #9f9f9f;
+  -webkit-box-shadow: 0 2px 0 #b8b8b8, 0 3px 0 #9f9f9f;
+  -o-box-shadow: 0 2px 0 #b8b8b8, 0 3px 0 #9f9f9f;
+  box-shadow: 0 2px 0 #b8b8b8, 0 3px 0 #9f9f9f;
+  top: 7px;
+}
+/* line 126, ../sass/screen.scss */
+#content .main-action-buttons li:first-child a {
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -khtml-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  border-left: none;
+}
+/* line 131, ../sass/screen.scss */
+#content .main-action-buttons li:last-child a {
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -khtml-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+  border-right: none;
+}
+/* line 136, ../sass/screen.scss */
+#content .main-action-buttons li:first-child, #content .main-action-buttons li:last-child {
+  width: 33%;
+}
+/* line 140, ../sass/screen.scss */
+#content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+/* line 145, ../sass/screen.scss */
+#content p {
+  letter-spacing: -0.06em;
+}
+/* line 149, ../sass/screen.scss */
+#content .code {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  background: #59a701;
+  -moz-box-shadow: 0 1px 1px #eeffdb, inset 0 1px 2px #234200;
+  -webkit-box-shadow: 0 1px 1px #eeffdb, inset 0 1px 2px #234200;
+  -o-box-shadow: 0 1px 1px #eeffdb, inset 0 1px 2px #234200;
+  box-shadow: 0 1px 1px #eeffdb, inset 0 1px 2px #234200;
+  padding: 5px 5px 4px 0;
+  margin: 30px 0;
+  font-family: "Courier New";
+  font-size: 14px;
+}
+/* line 158, ../sass/screen.scss */
+#content .code li {
+  line-height: 1.6em;
+}
+/* line 161, ../sass/screen.scss */
+#content .code li .num {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 6px 10px 0 10px;
+  margin-right: 10px;
+}
+/* line 167, ../sass/screen.scss */
+#content .code li:first-child .num {
+  padding-top: 8px;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -ms-border-radius: 4px 0 0 0;
+  -khtml-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+/* line 171, ../sass/screen.scss */
+#content .code li:last-child .num {
+  padding-bottom: 7px;
+  -moz-border-radius: 0 0 0 4px;
+  -webkit-border-radius: 0 0 0 4px;
+  -o-border-radius: 0 0 0 4px;
+  -ms-border-radius: 0 0 0 4px;
+  -khtml-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+/* line 178, ../sass/screen.scss */
+#content:before {
+  content: '';
+  display: block;
+  background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 400, color-stop(0%, #61b601), color-stop(100%, #74da01));
+  background-image: -webkit-radial-gradient(top center, #61b601, #74da01 400px);
+  background-image: -moz-radial-gradient(top center, #61b601, #74da01 400px);
+  background-image: -o-radial-gradient(top center, #61b601, #74da01 400px);
+  background-image: -ms-radial-gradient(top center, #61b601, #74da01 400px);
+  background-image: radial-gradient(top center, #61b601, #74da01 400px);
+  width: 750px;
+  height: 75px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  z-index: -1;
+  margin-left: -25%;
+  top: -29px;
+  margin-bottom: -75px;
+}

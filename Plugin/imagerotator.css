@@ -108,3 +108,27 @@
 .imgRotateControls ul li a:hover, .imgRotateControls ul li a.active {
 	background-position:0 100%;
 }
+
+.imgRotate .thumbControls ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:100%;
+}
+
+.imgRotate .thumbControls ul li {
+	display:inline;
+}
+
+.imgRoate .thumbControls ul li a {
+	background:green;
+}
+
+.imgRotate .thumbControls ul li a img {
+	width:90%;
+	opacity:.5;
+}
+
+.imgRotate .thumbControls ul li a.active img {
+	opacity:1;
+}
